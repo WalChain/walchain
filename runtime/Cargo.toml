@@ -1,11 +1,11 @@
 [package]
-authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
+authors = ['WalChain team <https://github.com/WalChain>']
 edition = '2018'
-homepage = 'https://substrate.dev'
+homepage = 'https://walchain.be'
 license = 'Unlicense'
-name = 'node-template-runtime'
-repository = 'https://github.com/substrate-developer-hub/substrate-node-template/'
-version = '3.0.0'
+name = 'walchain-runtime'
+repository = 'https://github.com/WalChain/walchain/'
+version = '1.0.0'
 
 [package.metadata.docs.rs]
 targets = ['x86_64-unknown-linux-gnu']
