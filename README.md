@@ -8,6 +8,11 @@ This repository contains the source code of the WalChain Blockchain node & runti
 
 Follow these steps to get started.
 
+### Using Nix
+
+Install [nix](https://nixos.org/) and optionally [direnv](https://github.com/direnv/direnv) and [lorri](https://github.com/target/lorri) for a fully plug
+and play experience for setting up the development environment. To get all the correct dependencies activate direnv `direnv allow` and lorri `lorri shell`.
+
 ### Rust Setup
 
 First, complete the [basic Rust setup instructions](./doc/rust-setup.md).
@@ -63,6 +68,11 @@ Start the development chain with detailed logging:
 ```bash
 RUST_LOG=debug RUST_BACKTRACE=1 ./target/release/walchain -lruntime=debug --dev
 ```
+
+### Connect with Polkadot-JS Apps Front-end
+
+Once the node template is running locally, you can connect it with **Polkadot-JS Apps** front-end
+to interact with your chain. [Click here](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) connecting the Apps to your local node template.
 
 ### Multi-Node Local Testnet
 
