@@ -30,6 +30,7 @@ std = [
     'pallet-balances/std',
     'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
+    'pallet-session/std',
     'pallet-sudo/std',
     'pallet-template/std',
     'pallet-timestamp/std',
@@ -46,6 +47,7 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    'validatorset/std'
 ]
 
 [build-dependencies.substrate-wasm-builder]
@@ -126,6 +128,12 @@ tag = 'monthly-2021-07'
 version = '3.0.0'
 
 [dependencies.pallet-sudo]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+tag = 'monthly-2021-07'
+version = '3.0.0'
+
+[dependencies.pallet-session]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-07'
@@ -218,4 +226,12 @@ version = '3.0.0'
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-07'
+version = '3.0.0'
+
+[dependencies.validatorset]
+package = 'substrate-validator-set'
+default-features = false
+git = 'https://github.com/gautamdhameja/substrate-validator-set.git'
+branch = 'master'
+#tag = 'monthly-2021-07'
 version = '3.0.0'
