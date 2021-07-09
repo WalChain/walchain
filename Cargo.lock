@@ -7189,6 +7189,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "substrate-validator-set"
+version = "3.0.0"
+source = "git+https://github.com/gautamdhameja/substrate-validator-set.git?branch=master#881b8747475b818460b0c53bea6a069c57685f10"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-session",
+ "parity-scale-codec",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "substrate-wasm-builder"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate.git?tag=monthly-2021-07#83808aa815a9fbc528b76cd25ae1dec57e269771"
@@ -8057,6 +8073,7 @@ dependencies = [
  "pallet-balances",
  "pallet-grandpa",
  "pallet-randomness-collective-flip",
+ "pallet-session",
  "pallet-sudo",
  "pallet-template",
  "pallet-timestamp",
@@ -8074,6 +8091,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "substrate-validator-set",
  "substrate-wasm-builder",
 ]
 
