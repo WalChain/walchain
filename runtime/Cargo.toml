@@ -16,6 +16,7 @@ runtime-benchmarks = [
     'frame-system/runtime-benchmarks',
     'hex-literal',
     'pallet-assets/runtime-benchmarks',
+    'pallet-collective/runtime-benchmarks',
     'pallet-balances/runtime-benchmarks',
     'pallet-template/runtime-benchmarks',
     'pallet-timestamp/runtime-benchmarks',
@@ -30,6 +31,7 @@ std = [
     'pallet-assets/std',
     'pallet-aura/std',
     'pallet-balances/std',
+    'pallet-collective/std',
     'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
     'pallet-session/std',
@@ -120,6 +122,13 @@ version = '3.0.0'
 [dependencies.pallet-balances]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
+tag = 'monthly-2021-07'
+version = '3.0.0'
+
+[dependencies.pallet-collective]
+git = 'https://github.com/paritytech/substrate' 
+package = 'pallet-collective'
+default-features = false
 tag = 'monthly-2021-07'
 version = '3.0.0'
 
@@ -242,4 +251,4 @@ default-features = false
 git = 'https://github.com/gautamdhameja/substrate-validator-set.git'
 branch = 'master'
 #tag = 'monthly-2021-07'
-version = '3.0.0'
+version = '3.0.1'

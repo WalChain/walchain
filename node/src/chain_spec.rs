@@ -1,6 +1,6 @@
 use sp_core::{Pair, Public, sr25519};
 use walchain_runtime::{
-	AccountId, AuraConfig, BalancesConfig, GenesisConfig, GrandpaConfig,
+	AccountId, AuraConfig, BalancesConfig, CouncilConfig, GenesisConfig, GrandpaConfig,
 	SessionConfig, Signature, SudoConfig, SystemConfig, ValidatorSetConfig,
 	opaque::SessionKeys, WASM_BINARY,
 };
@@ -163,6 +163,7 @@ fn testnet_genesis(
 	endowed_accounts: Vec<AccountId>,
 	_enable_println: bool,
 ) -> GenesisConfig {
+	let num_endowed_accounts = endowed_accounts.len();
 	GenesisConfig {
 		system: SystemConfig {
 			// Add Wasm runtime to storage.
@@ -172,6 +173,13 @@ fn testnet_genesis(
 		balances: BalancesConfig {
 			// Configure endowed accounts with initial balance of 1 << 60.
 			balances: endowed_accounts.iter().cloned().map(|k|(k, 1 << 60)).collect(),
+		},
+		council: CouncilConfig {
+			members: endowed_accounts.iter()
+						.take((num_endowed_accounts + 1) / 2)
+						.cloned()
+						.collect(),
+			phantom: Default::default(),
 		},
 		session: SessionConfig {
 			keys: initial_authorities.iter().map(|x| {
