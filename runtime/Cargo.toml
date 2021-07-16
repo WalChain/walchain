@@ -33,6 +33,7 @@ std = [
     'pallet-balances/std',
     'pallet-collective/std',
     'pallet-grandpa/std',
+    'pallet-identity/std',
     'pallet-randomness-collective-flip/std',
     'pallet-session/std',
     'pallet-sudo/std',
@@ -128,6 +129,13 @@ version = '3.0.0'
 [dependencies.pallet-collective]
 git = 'https://github.com/paritytech/substrate' 
 package = 'pallet-collective'
+default-features = false
+tag = 'monthly-2021-07'
+version = '3.0.0'
+
+[dependencies.pallet-identity]
+git = 'https://github.com/paritytech/substrate' 
+package = 'pallet-identity'
 default-features = false
 tag = 'monthly-2021-07'
 version = '3.0.0'
