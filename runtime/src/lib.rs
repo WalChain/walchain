@@ -38,6 +38,7 @@ pub use frame_support::{
 use frame_system::{EnsureRoot, EnsureOneOf};
 use pallet_transaction_payment::CurrencyAdapter;
 
+pub use pallet_faucet;
 pub use pallet_template;
 pub use validatorset;
 
@@ -308,7 +309,20 @@ impl pallet_sudo::Config for Runtime {
 	type Call = Call;
 }
 
-/// Configure the pallet-template in pallets/template.
+parameter_types! {
+	pub const FaucetDripAmount: Balance = 1000 * UNITS;
+	pub const MinBlocksBetweenClaims: BlockNumber = 1 * DAYS;
+	pub const MaxClaimsPerAccount: u32 = 3;
+}
+
+impl pallet_faucet::Config for Runtime {
+	type Currency = Balances;
+	type DripAmount = FaucetDripAmount;
+	type Event = Event;
+	type MaxClaimsPerAccount = MaxClaimsPerAccount;
+	type MinBlocksBetweenClaims = MinBlocksBetweenClaims;
+}
+
 impl pallet_template::Config for Runtime {
 	type Event = Event;
 }
@@ -429,6 +443,7 @@ construct_runtime!(
 		Assets: pallet_assets::{Pallet, Call, Storage, Event<T>},
 		Identity: pallet_identity::{Pallet, Call, Storage, Event<T>},
 		Uniques: pallet_uniques::{Pallet, Call, Storage, Event<T>},
+		Faucet: pallet_faucet::{Pallet, Call, Storage, Event<T>},
 	}
 );
 

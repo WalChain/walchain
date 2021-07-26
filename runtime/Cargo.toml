@@ -18,6 +18,7 @@ runtime-benchmarks = [
     'pallet-assets/runtime-benchmarks',
     'pallet-collective/runtime-benchmarks',
     'pallet-balances/runtime-benchmarks',
+    'pallet-faucet/runtime-benchmarks',
     'pallet-template/runtime-benchmarks',
     'pallet-timestamp/runtime-benchmarks',
     'pallet-uniques/std',
@@ -33,6 +34,7 @@ std = [
     'pallet-aura/std',
     'pallet-balances/std',
     'pallet-collective/std',
+    'pallet-faucet/std',
     'pallet-grandpa/std',
     'pallet-identity/std',
     'pallet-randomness-collective-flip/std',
@@ -133,6 +135,11 @@ git = 'https://github.com/paritytech/substrate'
 package = 'pallet-collective'
 default-features = false
 tag = 'monthly-2021-07'
+version = '3.0.0'
+
+[dependencies.pallet-faucet]
+default-features = false
+path = '../pallets/faucet'
 version = '3.0.0'
 
 [dependencies.pallet-identity]
