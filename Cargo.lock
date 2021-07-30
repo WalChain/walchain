@@ -3914,12 +3914,12 @@ dependencies = [
 
 [[package]]
 name = "pallet-faucet"
-version = "3.0.0"
+version = "1.0.0"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
- "pallet-timestamp",
+ "pallet-balances",
  "parity-scale-codec",
  "serde",
  "sp-core",

@@ -24,8 +24,13 @@ pub mod pallet {
     use frame_support::{dispatch::DispatchResult, pallet_prelude::*};
     use frame_system::pallet_prelude::*;
     use sp_runtime::ArithmeticError;
+
+    #[pallet::pallet]
+    #[pallet::generate_store(pub(super) trait Store)]
+    pub struct Pallet<T>(_);
+
     #[pallet::config]
-    pub trait Config: pallet_timestamp::Config + frame_system::Config {
+    pub trait Config: frame_system::Config {
         type Currency: Currency<Self::AccountId> + ReservableCurrency<Self::AccountId>;
 
         #[pallet::constant]
@@ -40,10 +45,7 @@ pub mod pallet {
         /// The overarching event type.
         type Event: From<Event<Self>> + IsType<<Self as frame_system::Config>::Event>;
     }
-
-    #[pallet::pallet]
-    #[pallet::generate_store(pub(super) trait Store)]
-    pub struct Pallet<T>(_);
+    
 
     #[pallet::storage]
     #[pallet::getter(fn last_claim_of)]

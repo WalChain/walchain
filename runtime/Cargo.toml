@@ -140,7 +140,7 @@ version = '3.0.0'
 [dependencies.pallet-faucet]
 default-features = false
 path = '../pallets/faucet'
-version = '3.0.0'
+version = '1.0.0'
 
 [dependencies.pallet-identity]
 git = 'https://github.com/paritytech/substrate' 
