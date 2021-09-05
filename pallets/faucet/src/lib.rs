@@ -1,14 +1,14 @@
 //! # Faucet Pallet
 //!
-//! - [`faucet::Config`](./trait.Config.html)
-//! - [`Call`](./enum.Call.html)
+//! - [`faucet::Config`](./pallet/trait.Config.html)
+//! - [`Call`](./pallet/enum.Call.html)
 //!
 //! ## Overview
 //!
 //! The Faucet pallet allows an account to claim a pre-configured number of tokens
 //! up to a certain number of times, and not faster than a configured interval.
 //! 
-//! This is a very simple pallet to be used on dev / test PoA chains only.
+//! _This is a very simple pallet to be used on dev / test PoA chains only._
 //!
 //! ## Interface
 //!
@@ -108,11 +108,11 @@ pub mod pallet {
 		/// The dispatch origin for this call must be _Signed_ by the requestor account.
         /// 
 		/// Note: the dispatchable function is configured for feeless extrinsics, so the
-        // the requestor account will not pay any fee. This allows new accounts to claim
-        // tokens right away, without needing a initial transfer from another account.
-        // On the other hand, this renders the chain vulnerable to DOS attacks, so this
-        // pallet should not be used on production / incentivized networks (so, only on
-        // non-incentivized testnets / in non-adversarial environments).
+        /// the requestor account will not pay any fee. This allows new accounts to claim
+        /// tokens right away, without needing a initial transfer from another account.
+        /// On the other hand, this renders the chain vulnerable to DOS attacks, so this
+        /// pallet should not be used on production / incentivized networks (so, only on
+        /// non-incentivized testnets / in non-adversarial environments).
         #[transactional]
         #[pallet::weight(((10_000 + T::DbWeight::get().reads_writes(2,2)), DispatchClass::Normal, Pays::Yes))]
         pub fn claim_tokens(origin: OriginFor<T>) -> DispatchResult {
