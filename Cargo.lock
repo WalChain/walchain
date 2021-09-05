@@ -3875,15 +3875,12 @@ dependencies = [
 [[package]]
 name = "pallet-faucet"
 version = "1.0.0"
+source = "git+https://github.com/stiiifff/pallet-faucet#013287ae630d36b6fecfc84afbfe9e1cd146246f"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
- "pallet-balances",
  "parity-scale-codec",
- "serde",
- "sp-core",
- "sp-io",
  "sp-runtime",
  "sp-std",
 ]
