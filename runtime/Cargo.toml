@@ -89,6 +89,11 @@ default-features = false
 tag = 'monthly-2021-08'
 version = '4.0.0-dev'
 
+[dependencies.pallet-faucet]
+git = 'https://github.com/stiiifff/pallet-faucet'
+default-features = false
+version = '1.0.0'
+
 [dependencies.pallet-identity]
 git = 'https://github.com/paritytech/substrate' 
 package = 'pallet-identity'
@@ -232,11 +237,12 @@ runtime-benchmarks = [
     'frame-system/runtime-benchmarks',
     'hex-literal',
     'pallet-assets/runtime-benchmarks',
-    'pallet-collective/runtime-benchmarks',
     'pallet-balances/runtime-benchmarks',
+    'pallet-collective/runtime-benchmarks',
+    'pallet-faucet/runtime-benchmarks',
     'pallet-template/runtime-benchmarks',
     'pallet-timestamp/runtime-benchmarks',
-    'pallet-uniques/std',
+    'pallet-uniques/runtime-benchmarks',
     'sp-runtime/runtime-benchmarks',
 ]
 std = [
@@ -249,6 +255,7 @@ std = [
     'pallet-aura/std',
     'pallet-balances/std',
     'pallet-collective/std',
+    'pallet-faucet/std',
     'pallet-grandpa/std',
     'pallet-identity/std',
     'pallet-randomness-collective-flip/std',

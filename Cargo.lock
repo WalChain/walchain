@@ -3873,6 +3873,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-faucet"
+version = "1.0.0"
+source = "git+https://github.com/stiiifff/pallet-faucet#013287ae630d36b6fecfc84afbfe9e1cd146246f"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "parity-scale-codec",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "pallet-grandpa"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate.git?tag=monthly-2021-08#4d28ebeb8b027ca0227fe7779c5beb70a7b56467"
@@ -8127,6 +8140,7 @@ dependencies = [
  "pallet-aura",
  "pallet-balances",
  "pallet-collective",
+ "pallet-faucet",
  "pallet-grandpa",
  "pallet-identity",
  "pallet-randomness-collective-flip",
