@@ -1,0 +1,10 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "author_insertKey",
+    "params": [
+        "aura",
+        "stay estate flee tail gather lamp feed hint tragic cousin miss use",
+        "0xc00c8bcbbc9604c55e332514209d489ad1cbeae0f4919736364a45c86d156250"
+    ]
+}

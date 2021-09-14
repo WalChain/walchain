@@ -1,0 +1,10 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "author_insertKey",
+    "params": [
+        "aura",
+        "genre pill news purse illness pudding tiger aspect protect similar armed develop",
+        "0xfc71657019e8dcff3879cded059b355b0591d04b19994c7a3f28928d6d4b100d"
+    ]
+}

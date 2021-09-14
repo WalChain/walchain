@@ -1,0 +1,10 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "author_insertKey",
+    "params": [
+        "gran",
+        "stay estate flee tail gather lamp feed hint tragic cousin miss use",
+        "0xd27318f9d81d48736da8acdb4ca7c377e322b0a17ec12ba22ab6cdb7bbab86c5"
+    ]
+}

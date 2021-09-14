@@ -1,0 +1,35 @@
+-- Validator 1
+❯ subkey generate --scheme sr25519
+Secret phrase `stay estate flee tail gather lamp feed hint tragic cousin miss use` is account:
+  Secret seed:      0x0f81410f0fc0158445b4f95dfcaddddc87912f2f348850f0508ffe9b3350eb64
+  Public key (hex): 0xc00c8bcbbc9604c55e332514209d489ad1cbeae0f4919736364a45c86d156250
+  Account ID:       0xc00c8bcbbc9604c55e332514209d489ad1cbeae0f4919736364a45c86d156250
+  SS58 Address:     5GQWn5QHma64xeuMp4foJJSCoBuApcZqNj9mwzugWfoX3haY
+❯ subkey inspect --scheme ed25519 "stay estate flee tail gather lamp feed hint tragic cousin miss use"
+Secret phrase `stay estate flee tail gather lamp feed hint tragic cousin miss use` is account:
+  Secret seed:      0x0f81410f0fc0158445b4f95dfcaddddc87912f2f348850f0508ffe9b3350eb64
+  Public key (hex): 0xd27318f9d81d48736da8acdb4ca7c377e322b0a17ec12ba22ab6cdb7bbab86c5
+  Account ID:       0xd27318f9d81d48736da8acdb4ca7c377e322b0a17ec12ba22ab6cdb7bbab86c5
+  SS58 Address:     5Gpe6zLCt4a875kgZFMErL7mVKSNbBG85jm2WzW2KVU6nipu
+
+-- Validator 2
+❯ subkey generate --scheme sr25519
+Secret phrase `genre pill news purse illness pudding tiger aspect protect similar armed develop` is account:
+  Secret seed:      0x966a638e75ae6c2deec816c43b11b94403fa04582f9245ef35d093a28d223cc9
+  Public key (hex): 0xfc71657019e8dcff3879cded059b355b0591d04b19994c7a3f28928d6d4b100d
+  Account ID:       0xfc71657019e8dcff3879cded059b355b0591d04b19994c7a3f28928d6d4b100d
+  SS58 Address:     5HmhcKi1vZGoyirJUTLeTgSQz6uLStfxo37gzMGJmmtuE1E5
+❯ subkey inspect --scheme ed25519 "genre pill news purse illness pudding tiger aspect protect similar armed develop"
+Secret phrase `genre pill news purse illness pudding tiger aspect protect similar armed develop` is account:
+  Secret seed:      0x966a638e75ae6c2deec816c43b11b94403fa04582f9245ef35d093a28d223cc9
+  Public key (hex): 0x9d4da01148c43214b43681d5028dc97d44f34be4c289fab6962731bfba50ebdb
+  Account ID:       0x9d4da01148c43214b43681d5028dc97d44f34be4c289fab6962731bfba50ebdb
+  SS58 Address:     5FcxSABE4bBhNTdqNou7YJzj8tcrP4uLCZY2DH9ALZetUGuC
+
+-- Sudo account
+❯ subkey generate --scheme sr25519
+Secret phrase `mom extra melt drum half road bullet bamboo shrimp trick upper scout` is account:
+  Secret seed:      0x978b3432b2b5e6c95af35ed50d3fde2fa70457b2522e3dc00c8ea4e3d11d9a96
+  Public key (hex): 0x7078bc3444a4c43bfd497a073b2775b8593cfecc16fff1f6823902a7beea1127
+  Account ID:       0x7078bc3444a4c43bfd497a073b2775b8593cfecc16fff1f6823902a7beea1127
+  SS58 Address:     5EcB5wqty5UgFght7f1x6CjZCWfAomMhku7GKfwSkEwGC6KB
