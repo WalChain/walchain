@@ -22,27 +22,27 @@
       "session": {
         "keys": [
           [
-            "5GQWn5QHma64xeuMp4foJJSCoBuApcZqNj9mwzugWfoX3haY",
-            "5GQWn5QHma64xeuMp4foJJSCoBuApcZqNj9mwzugWfoX3haY",
+            "5F6VuW8rrjFx7bWi9bTfjrmgzN3RzoBc2LrbvfLpn6Zpfkzw",
+            "5F6VuW8rrjFx7bWi9bTfjrmgzN3RzoBc2LrbvfLpn6Zpfkzw",
             {
-              "aura": "5GQWn5QHma64xeuMp4foJJSCoBuApcZqNj9mwzugWfoX3haY",
-              "grandpa": "5Gpe6zLCt4a875kgZFMErL7mVKSNbBG85jm2WzW2KVU6nipu"
+              "aura": "5F6VuW8rrjFx7bWi9bTfjrmgzN3RzoBc2LrbvfLpn6Zpfkzw",
+              "grandpa": "5Ea7x26zMRb5LKrwV9AkPcNsmRTJjddWR1bNTfNPhrLyuNL1"
             }
           ],
           [
-            "5HmhcKi1vZGoyirJUTLeTgSQz6uLStfxo37gzMGJmmtuE1E5",
-            "5HmhcKi1vZGoyirJUTLeTgSQz6uLStfxo37gzMGJmmtuE1E5",
+            "5CXWz2kXo9tGhdYVZMXh23A1h5Y12ipf6zDo7Zc3Z1iDHfeW",
+            "5CXWz2kXo9tGhdYVZMXh23A1h5Y12ipf6zDo7Zc3Z1iDHfeW",
             {
-              "aura": "5HmhcKi1vZGoyirJUTLeTgSQz6uLStfxo37gzMGJmmtuE1E5",
-              "grandpa": "5FcxSABE4bBhNTdqNou7YJzj8tcrP4uLCZY2DH9ALZetUGuC"
+              "aura": "5CXWz2kXo9tGhdYVZMXh23A1h5Y12ipf6zDo7Zc3Z1iDHfeW",
+              "grandpa": "5GomVXNRjWWigiv9LegS2jzjGpXZJ9rDoyfpuZYGe2M9owad"
             }
           ]
         ]
       },
       "validatorSet": {
         "validators": [
-          "5GQWn5QHma64xeuMp4foJJSCoBuApcZqNj9mwzugWfoX3haY",
-          "5HmhcKi1vZGoyirJUTLeTgSQz6uLStfxo37gzMGJmmtuE1E5"
+          "5F6VuW8rrjFx7bWi9bTfjrmgzN3RzoBc2LrbvfLpn6Zpfkzw",
+          "5CXWz2kXo9tGhdYVZMXh23A1h5Y12ipf6zDo7Zc3Z1iDHfeW"
         ]
       },
       "aura": {
@@ -54,18 +54,27 @@
       "balances": {
         "balances": [
           [
-            "5EcB5wqty5UgFght7f1x6CjZCWfAomMhku7GKfwSkEwGC6KB",
+            "5EHgm6WSHsaL9iwy3Su1qdVpWEV9RJwtSk3i71JP6zDKyK4n",
+            1152921504606846976
+          ],
+          [
+            "5Cu3QjV8AVgtm7MMwURJKQKzS2ZAr4arZECwiRQGdP6CKBaM",
+            1152921504606846976
+          ],
+          [
+            "5EcmHxUyqSewEoGF6bs8o7yiZ7q5q5LFZda2U8MntNfgJj4e",
             1152921504606846976
           ]
         ]
       },
       "sudo": {
-        "key": "5EcB5wqty5UgFght7f1x6CjZCWfAomMhku7GKfwSkEwGC6KB"
+        "key": "5EHgm6WSHsaL9iwy3Su1qdVpWEV9RJwtSk3i71JP6zDKyK4n"
       },
       "council": {
         "phantom": null,
         "members": [
-          "5EcB5wqty5UgFght7f1x6CjZCWfAomMhku7GKfwSkEwGC6KB"
+          "5Cu3QjV8AVgtm7MMwURJKQKzS2ZAr4arZECwiRQGdP6CKBaM",
+          "5EcmHxUyqSewEoGF6bs8o7yiZ7q5q5LFZda2U8MntNfgJj4e"
         ]
       }
     }
