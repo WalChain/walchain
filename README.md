@@ -4,6 +4,8 @@ WalChain is an experimental network built by Blockchain entrepreneurs from Wallo
 
 This repository contains the source code of the WalChain Blockchain node & runtime, based on [Substrate](https://www.substrate.dev/), an open-source framework for building tailored Blockchain solutions.
 
+The **Walchain test network** (or _testnet_) is live at : https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet-rpc.walchain.be%3A443#/explorer.
+
 ## Getting Started
 
 Follow these steps to get started.
