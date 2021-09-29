@@ -46,7 +46,6 @@ use sp_version::NativeVersion;
 use sp_version::RuntimeVersion;
 
 pub use pallet_faucet;
-pub use pallet_template;
 pub use validatorset;
 
 /// An index to a block.
@@ -334,10 +333,6 @@ impl pallet_faucet::Config for Runtime {
 	type WeightInfo = pallet_faucet::weights::SubstrateWeight<Runtime>;
 }
 
-impl pallet_template::Config for Runtime {
-	type Event = Event;
-}
-
 parameter_types! {
 	pub const CouncilMotionDuration: BlockNumber = 30 * MINUTES;
 	pub const CouncilMaxProposals: u32 = 100;
@@ -500,8 +495,6 @@ construct_runtime!(
 		Sudo: pallet_sudo::{Pallet, Call, Config<T>, Storage, Event<T>},
 		Council: pallet_collective::{Pallet, Call, Storage, Origin<T>, Event<T>, Config<T>},
 		Contracts: pallet_contracts::{Pallet, Call, Storage, Event<T>},
-		// Include the custom logic from the pallet-template in the runtime.
-		TemplateModule: pallet_template::{Pallet, Call, Storage, Event<T>},
 		Assets: pallet_assets::{Pallet, Call, Storage, Event<T>},
 		Identity: pallet_identity::{Pallet, Call, Storage, Event<T>},
 		Uniques: pallet_uniques::{Pallet, Call, Storage, Event<T>},
@@ -739,7 +732,6 @@ impl_runtime_apis! {
 			add_benchmark!(params, batches, pallet_balances, Balances);
 			add_benchmark!(params, batches, pallet_collective, Council);
 			add_benchmark!(params, batches, pallet_faucet, Faucet);
-			add_benchmark!(params, batches, pallet_template, TemplateModule);
 			add_benchmark!(params, batches, pallet_timestamp, Timestamp);
 			add_benchmark!(params, batches, pallet_uniques, Uniques);
 

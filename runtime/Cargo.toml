@@ -146,11 +146,6 @@ git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-08'
 version = '4.0.0-dev'
 
-[dependencies.pallet-template]
-default-features = false
-path = '../pallets/template'
-version = '3.0.0-monthly-2021-08'
-
 [dependencies.pallet-timestamp]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -262,7 +257,6 @@ runtime-benchmarks = [
     'pallet-collective/runtime-benchmarks',
     'pallet-contracts/runtime-benchmarks',
     'pallet-faucet/runtime-benchmarks',
-    'pallet-template/runtime-benchmarks',
     'pallet-timestamp/runtime-benchmarks',
     'pallet-uniques/runtime-benchmarks',
     'sp-runtime/runtime-benchmarks',
@@ -286,7 +280,6 @@ std = [
     'pallet-randomness-collective-flip/std',
     'pallet-session/std',
     'pallet-sudo/std',
-    'pallet-template/std',
     'pallet-timestamp/std',
     'pallet-transaction-payment-rpc-runtime-api/std',
     'pallet-transaction-payment/std',
