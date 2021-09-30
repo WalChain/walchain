@@ -35,7 +35,7 @@ jobs:
           # path: ./authz-server
           # dockerfile: ./authz-server/Dockerfile
           push: true
-          # tags: user/app:latest
+          tags: walchain/walchain-node:latest
           # add_git_labels: true
           # tag_with_ref: true
           # tag_with_sha: true
