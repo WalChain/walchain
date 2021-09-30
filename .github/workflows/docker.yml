@@ -1,0 +1,42 @@
+name: server
+
+on: [pull_request]
+# on:
+#   push:
+#     branches:
+#       - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      # - name: Build test container image
+      #   uses: whoan/docker-build-with-cache-action@v5
+      #   with:
+      #     username: walchain
+      #     password: "${{ secrets.GITHUB_TOKEN }}"
+      #     image_name: walchain/walchain/walchain-node
+      #     push_git_tag: true
+      #     registry: docker.pkg.github.com
+      #     context: ./server
+      #     dockerfile: Dockerfile.test
+
+      - name: Build Walchain node image
+        uses: docker/build-push-action@v2
+        with:
+          # username: ${{ github.actor }}
+          # password: ${{ secrets.GITHUB_TOKEN }}
+          # registry: ${{ env.GCR_REGISTRY }}
+          # repository: ${{ secrets.GCP_PROJECT_ID }}/substrate-marketplace-authz-server
+          # path: ./authz-server
+          # dockerfile: ./authz-server/Dockerfile
+          push: true
+          # tags: user/app:latest
+          # add_git_labels: true
+          # tag_with_ref: true
+          # tag_with_sha: true
+          # tags: staging,latest
