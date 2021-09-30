@@ -1,23 +1,27 @@
-FROM joystream/rust-builder AS builder
-LABEL description="compiles and caches dependencies, artifacts and node"
+FROM docker.io/paritytech/ci-linux:production as builder
+LABEL description="Build stage"
+
 WORKDIR /walchain
 COPY . /walchain
 
 RUN cargo build --release
 
-FROM debian:stretch
+# ===== SECOND STAGE ======
+
+FROM docker.io/library/ubuntu:20.04
 LABEL description="Walchain node"
-WORKDIR /walchain
-COPY --from=builder /walchain/target/release/walchain /walchain/walchain-node
 
-EXPOSE 30333 9933 9944
+COPY --from=builder /walchain/target/release/walchain /usr/local/bin
 
-# Use these volumes to persits chain state and keystore, eg.:
-# --base-path /data
-# optionally separate keystore (otherwise it will be stored in the base path)
-# --keystore-path /keystore
-# if base-path isn't specified, chain state is stored inside container in ~/.local/share/joystream-node/
-# which is not ideal
-VOLUME ["/data", "/keystore"]
+RUN useradd -m -u 1000 -U -s /bin/sh -d /walchain walchain && \
+    mkdir -p /walchain/.local/share && \
+    mkdir /data && \
+    chown -R walchain:walchain /data && \
+    ln -s /data /walchain/.local/share/walchain && \
+    rm -rf /usr/bin /usr/sbin
 
-ENTRYPOINT ["/walchain/walchain-node"]
+USER walchain
+EXPOSE 30333 9933 9944 9615
+VOLUME ["/data"]
+
+ENTRYPOINT ["/usr/local/bin/walchain"]
