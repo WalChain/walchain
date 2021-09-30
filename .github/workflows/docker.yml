@@ -1,4 +1,4 @@
-name: server
+name: Node Docker image
 
 on: [pull_request]
 # on:

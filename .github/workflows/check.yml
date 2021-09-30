@@ -1,4 +1,4 @@
-name: Check Set-Up & Build
+name: Node CI Build
 
 # Controls when the action will run.
 on:
@@ -13,16 +13,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  check:
+  rust-check:
     # The type of runner that the job will run on
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout sources
+        uses: actions/checkout@v2
 
-      - name: Set-Up
+      - name: Setup build env
         run: sudo apt install -y cmake pkg-config libssl-dev git build-essential clang libclang-dev curl
 
       - name: Install Rustup
