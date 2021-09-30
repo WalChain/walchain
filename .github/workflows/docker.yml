@@ -14,17 +14,11 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v2
 
-      - name: Build Walchain node image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: walchain/walchain-node:latest
-
       - uses: whoan/docker-build-with-cache-action@v5
         with:
           username: walchain
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
-          image_name: ghcr.io/walchain/walchain-node
+          image_name: walchain/walchain-node
           image_tag: latest
           push_git_tag: true
