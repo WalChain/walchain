@@ -1,9 +1,10 @@
 name: Node Docker image
 
-on:
-  push:
-    branches:
-      - master
+on: [pull_request]
+# on:
+#   push:
+#     branches:
+#       - master
 
 jobs:
   docker-build:
