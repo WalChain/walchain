@@ -7583,7 +7583,7 @@ checksum = "9d5b2c62b4012a3e1eca5a7e077d13b3bf498c4073e33ccd58626607748ceeca"
 
 [[package]]
 name = "walchain"
-version = "1.1.0"
+version = "1.2.0"
 dependencies = [
  "frame-benchmarking",
  "frame-benchmarking-cli",
@@ -7623,7 +7623,7 @@ dependencies = [
 
 [[package]]
 name = "walchain-runtime"
-version = "1.1.0"
+version = "1.2.0"
 dependencies = [
  "frame-benchmarking",
  "frame-executive",
