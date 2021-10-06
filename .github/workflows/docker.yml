@@ -19,5 +19,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           image_name: walchain/walchain-node
-          image_tag: latest
+          image_tag: v1.1.0,latest
           push_git_tag: true
