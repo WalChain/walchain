@@ -14,7 +14,6 @@
     "tokenSymbol": "WALC"
   },
   "consensusEngine": null,
-  "lightSyncState": null,
   "codeSubstitutes": {},
   "genesis": {
     "raw": {
