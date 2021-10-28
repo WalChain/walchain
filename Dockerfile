@@ -4,6 +4,8 @@ LABEL description="Build stage"
 WORKDIR /walchain
 COPY . /walchain
 
+RUN apt-get update && apt-get -y install ca-certificates
+
 RUN cargo build --release
 
 # ===== SECOND STAGE ======
@@ -11,6 +13,7 @@ RUN cargo build --release
 FROM docker.io/library/ubuntu:20.04
 LABEL description="Walchain node"
 
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /walchain/target/release/walchain /usr/local/bin
 
 RUN useradd -m -u 1000 -U -s /bin/sh -d /walchain walchain && \
@@ -23,5 +26,8 @@ RUN useradd -m -u 1000 -U -s /bin/sh -d /walchain walchain && \
 USER walchain
 EXPOSE 30333 9933 9944 9615
 VOLUME ["/data"]
+
+ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+ENV SSL_CERT_DIR=/etc/ssl/certs
 
 ENTRYPOINT ["/usr/local/bin/walchain"]
